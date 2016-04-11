@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>学生列表</h1></div>
+        <div class="col-md-4">
+            <div class="input-group">
+                <span class="input-group-addon" id="password">Password</span>
+                <input class="form-control" ng-model="a.password"/>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="get_students()">获取</button>
+            <div class="input-group">
+                <span class="input-group-addon" id="filter">Filter</span>
+                <input class="form-control" ng-model="searchText"/>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>Email</th>
+            <th>单位</th>
+            <th>到达日期</th>
+            <th>微信号</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="student in students  | filter:searchText | orderBy:'register_time'">
+            <th>{{student.name}}</th>
+            <th>{{student.phone}}</th>
+            <th>{{student.email}}</th>
+            <th>{{student.academy}}</th>
+            <th>{{student.arrive_date}}</th>
+            <th>{{student.wechat}}</th>
+        </tr>
+        </tbody>
+    </table>
+</div>

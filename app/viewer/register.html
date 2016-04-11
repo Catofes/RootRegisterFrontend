@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+                请填写下列信息
+            </h3>
+            <div class="alert alert-success" ng-show="i.register_success">注册成功</div>
+            <div class="alert alert-danger" ng-show="i.register_failed">{{i.error_message}}</div>
+            <form class="form-horizontal" ng-submit="submit()">
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-2 control-label">姓名*</label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" id="inputName" placeholder="姓名"
+                               ng-model="r.name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email*</label>
+                    <div class="col-sm-10">
+                        <input type="email" required class="form-control" id="inputEmail" placeholder="Email"
+                               ng-model="r.email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPhone" class="col-sm-2 control-label">联系电话*</label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" id="inputPhone" placeholder="手机"
+                               ng-model="r.phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAcademy" class="col-sm-2 control-label">单位*</label>
+                    <div class="col-sm-10">
+                        <input type="text" required class="form-control" id="inputAcademy" placeholder="单位"
+                               ng-model="r.academy">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputWeChat" class="col-sm-2 control-label">微信号</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputWeChat" placeholder="微信号" ng-model="r.wechat">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputArriveDate" class="col-sm-2 control-label">到达日期</label>
+                    <div class="col-sm-10">
+                        <p class="input-group">
+                            <input type="text" required class="form-control" id="inputArriveDate" placeholder="到达日期"
+                                   uib-datepicker-popup is-open="popup1.opened"
+                                   datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-model="
+                               r.arrive_date">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open1()">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputLeaveDate" class="col-sm-2 control-label">离开日期</label>
+                    <div class="col-sm-10">
+                        <p class="input-group">
+                            <input type="text" class="form-control" id="inputLeaveDate" placeholder="离开日期"
+                                   uib-datepicker-popup is-open="popup2.opened"
+                                   datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                   ng-model="r.leave_date">
+                            <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" ng-click="open2()">
+                                        <i class="glyphicon glyphicon-calendar"></i>
+                                    </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputJob" class="col-sm-2 control-label">职位</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputJob" placeholder="职位" ng-model="r.job">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSpecial" class="col-sm-2 control-label">特殊要求(饮食等）</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputSpecial" placeholder="特殊要求"
+                               ng-model="r.special">
+                    </div>
+                </div>
+                <p>
+                    *号必须填写。
+                </p>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">提交注册</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+</script>

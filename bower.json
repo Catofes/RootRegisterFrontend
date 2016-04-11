@@ -1,0 +1,19 @@
+{
+  "name": "RootRegisterFrontend",
+  "description": "RootRegisterFrontend WebSite",
+  "version": "0.0.1",
+  "homepage": "https://github.com/catofes/RootRegisterFrontend",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.3",
+    "angular-route": "~1.5.3",
+    "angular-loader": "~1.5.3",
+    "angular-mocks": "~1.5.3",
+    "angular-resource": "~1.5.3",
+    "angular-bootstrap": "~1.3.1",
+    "html5-boilerplate": "~5.2.0",
+    "moment": "latest",
+    "bootstrap": "~3.3.6"
+  }
+}
