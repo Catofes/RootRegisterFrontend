@@ -19,6 +19,8 @@ angular.module('RootRegisterFrontend', [
         controller: 'AdminCtrl'
     }).when('/accommodation', {
         templateUrl: 'viewer/accommodation.html'
+    }).when('/announce', {
+        templateUrl: 'viewer/announce.html'
     }).otherwise({redirectTo: '/'});
 }
 ]);
