@@ -74,16 +74,14 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputJob" class="col-sm-2 control-label">职位</label>
+                    <label for="inputJob" class="col-sm-2 control-label">职位*</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputJob" placeholder="职位" ng-model="r.job">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputSpecial" class="col-sm-2 control-label">特殊要求(饮食等）</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputSpecial" placeholder="特殊要求"
-                               ng-model="r.special">
+                        <select class="form-control" id="inputJob" ng-model="r.job">
+                            <option>本科生</option>
+                            <option>硕士研究生</option>
+                            <option>博士研究生</option>
+                            <option>在职人员</option>
+                        </select>
                     </div>
                 </div>
                 <p>
